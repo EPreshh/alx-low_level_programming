@@ -2,11 +2,10 @@
 #include "main.h"
 
 /**
- * _isaplha - checks for aplhabetic character and prints a result to the stdout
- * @c: - the character to check
+ * _isalpha - check for an alphabet and prints to stdout
+ * @c: Character to be checked
  *
- * Return: on being a letter, lowecase or uppercase,  1
- * if otherwise 0
+ * Return: 1 if character is an alphabet. 0 otherwise
  */
 int _isalpha(int c)
 {
