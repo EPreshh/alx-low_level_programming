@@ -2,8 +2,8 @@
 #include <string.h>
 
 /**
- * _puts - Prints a string followed by a new line to stdout
- * @str: Pointer to the string to print
+ * rev_string - reverses a string
+ * @s: Pointer to the string to print
  */
 void rev_string(char *s)
 {
