@@ -29,23 +29,25 @@ int _sqrt_recursion(int n)
  */
 int _sqrt_recursive_helper(int n, int start, int end)
 {
-	int mid;
+	int mid, square;
 
-	if (start > end)
+	if (start <= end)
 	{
-		return (-1);
+		mid = start + (end - start) / 2;
+		square = mid * mid;
+	
+		if (square == n)
+		{
+			return (mid);
+		}
+		else if (square < n)
+		{
+			return (_sqrt_recursive_helper(n, mid + 1, end));
+		}
+		else
+		{
+			return (_sqrt_recursive_helper(n, start, mid - 1));
+		}
 	}
-	mid = (start + end) / 2;
-	if (mid * mid == n)
-	{
-		return (mid);
-	}
-	if (mid * mid < n)
-	{
-		return (_sqrt_recursive_helper(n, mid + 1, end));
-	}
-	else
-	{
-		return (_sqrt_recursive_helper(n, start, mid - 1));
-	}
+	return (-1);
 }
